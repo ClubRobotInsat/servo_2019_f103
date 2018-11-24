@@ -1,0 +1,822 @@
+EESchema Schematic File Version 4
+LIBS:servo_2019_f103-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Servomotor Board for Black Pill"
+Date "2018-11-24"
+Rev "1"
+Comp "Club Robot"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L @Robot:servo_connector U4
+U 1 1 5BF984EA
+P 7450 1300
+F 0 "U4" H 7678 1351 50  0000 L CNN
+F 1 "servo_connector" H 7678 1260 50  0000 L CNN
+F 2 "@Robot:ConnectorMicromatch-4" H 7450 1550 50  0001 C CNN
+F 3 "" H 7450 1550 50  0001 C CNN
+	1    7450 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L @Robot:alim_logique_5V J1
+U 1 1 5BF98593
+P 7600 1950
+F 0 "J1" H 7769 2000 50  0000 L CNN
+F 1 "alim_logique_5V" H 7769 1909 50  0000 L CNN
+F 2 "@Robot:HE14-3_horizontal" H 7600 1950 50  0001 C CNN
+F 3 "" H 7600 1950 50  0001 C CNN
+	1    7600 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L @Robot:w5500 U3
+U 1 1 5BF985F0
+P 7650 2950
+F 0 "U3" H 7650 3425 50  0000 C CNN
+F 1 "w5500" H 7650 3334 50  0000 C CNN
+F 2 "@Robot:w5500" H 7650 2600 50  0001 C CNN
+F 3 "" H 7650 2600 50  0001 C CNN
+	1    7650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q1
+U 1 1 5BF98992
+P 1450 5700
+F 0 "Q1" H 1558 5647 60  0000 L CNN
+F 1 "BSS138" H 1558 5753 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 1650 5900 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1650 6000 60  0001 L CNN
+F 4 "BSS138CT-ND" H 1650 6100 60  0001 L CNN "Digi-Key_PN"
+F 5 "BSS138" H 1650 6200 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1650 6300 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1650 6400 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1650 6500 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1650 6600 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1650 6700 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 1650 6800 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1650 6900 60  0001 L CNN "Status"
+	1    1450 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5BF98AFD
+P 1450 5350
+F 0 "#PWR0101" H 1450 5200 50  0001 C CNN
+F 1 "+3V3" H 1465 5523 50  0000 C CNN
+F 2 "" H 1450 5350 50  0001 C CNN
+F 3 "" H 1450 5350 50  0001 C CNN
+	1    1450 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5BF98B6E
+P 1450 6050
+F 0 "#PWR0102" H 1450 5900 50  0001 C CNN
+F 1 "+5V" H 1465 6223 50  0000 C CNN
+F 2 "" H 1450 6050 50  0001 C CNN
+F 3 "" H 1450 6050 50  0001 C CNN
+	1    1450 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BF98C7C
+P 1900 5400
+F 0 "R2" V 2000 5400 50  0000 C CNN
+F 1 "10k" V 2100 5400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.50mm_HandSolder" V 1830 5400 50  0001 C CNN
+F 3 "" H 1900 5400 50  0001 C CNN
+	1    1900 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 5500 1450 5400
+Wire Wire Line
+	1750 5400 1450 5400
+Connection ~ 1450 5400
+Wire Wire Line
+	1450 5400 1450 5350
+Wire Wire Line
+	2100 5600 2100 5400
+Wire Wire Line
+	2100 5400 2050 5400
+Wire Wire Line
+	2100 5600 1750 5600
+Wire Wire Line
+	2250 5400 2100 5400
+Connection ~ 2100 5400
+$Comp
+L Device:R R1
+U 1 1 5BF991F3
+P 1900 5950
+F 0 "R1" V 1693 5950 50  0000 C CNN
+F 1 "10k" V 1784 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.50mm_HandSolder" V 1830 5950 50  0001 C CNN
+F 3 "" H 1900 5950 50  0001 C CNN
+	1    1900 5950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 6050 1450 5950
+Wire Wire Line
+	1450 5950 1750 5950
+Connection ~ 1450 5950
+Wire Wire Line
+	1450 5950 1450 5900
+Wire Wire Line
+	2250 5950 2050 5950
+Text Label 2250 5400 0    50   ~ 0
+µCTX
+Text Label 2250 5950 0    50   ~ 0
+ServoRX
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q2
+U 1 1 5BF99E00
+P 1400 7100
+F 0 "Q2" H 1508 7047 60  0000 L CNN
+F 1 "BSS138" H 1508 7153 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 1600 7300 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1600 7400 60  0001 L CNN
+F 4 "BSS138CT-ND" H 1600 7500 60  0001 L CNN "Digi-Key_PN"
+F 5 "BSS138" H 1600 7600 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1600 7700 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1600 7800 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1600 7900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1600 8000 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1600 8100 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 1600 8200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1600 8300 60  0001 L CNN "Status"
+	1    1400 7100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 5BF99E06
+P 1400 6750
+F 0 "#PWR0103" H 1400 6600 50  0001 C CNN
+F 1 "+3V3" H 1415 6923 50  0000 C CNN
+F 2 "" H 1400 6750 50  0001 C CNN
+F 3 "" H 1400 6750 50  0001 C CNN
+	1    1400 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 5BF99E0C
+P 1400 7450
+F 0 "#PWR0104" H 1400 7300 50  0001 C CNN
+F 1 "+5V" H 1415 7623 50  0000 C CNN
+F 2 "" H 1400 7450 50  0001 C CNN
+F 3 "" H 1400 7450 50  0001 C CNN
+	1    1400 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BF99E12
+P 1850 6800
+F 0 "R3" V 1950 6800 50  0000 C CNN
+F 1 "10k" V 2050 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.50mm_HandSolder" V 1780 6800 50  0001 C CNN
+F 3 "" H 1850 6800 50  0001 C CNN
+	1    1850 6800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 6900 1400 6800
+Wire Wire Line
+	1700 6800 1400 6800
+Connection ~ 1400 6800
+Wire Wire Line
+	1400 6800 1400 6750
+Wire Wire Line
+	2050 7000 2050 6800
+Wire Wire Line
+	2050 6800 2000 6800
+Wire Wire Line
+	2050 7000 1700 7000
+Wire Wire Line
+	2200 6800 2050 6800
+Connection ~ 2050 6800
+$Comp
+L Device:R R4
+U 1 1 5BF99E21
+P 1850 7350
+F 0 "R4" V 2057 7350 50  0000 C CNN
+F 1 "10k" V 1966 7350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.50mm_HandSolder" V 1780 7350 50  0001 C CNN
+F 3 "" H 1850 7350 50  0001 C CNN
+	1    1850 7350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 7450 1400 7350
+Wire Wire Line
+	1400 7350 1700 7350
+Connection ~ 1400 7350
+Wire Wire Line
+	1400 7350 1400 7300
+Wire Wire Line
+	2200 7350 2000 7350
+Text Label 2200 6800 0    50   ~ 0
+µCRX
+Text Label 2200 7350 0    50   ~ 0
+ServoTX
+Text Label 7200 1350 2    50   ~ 0
+ServoTX
+Text Label 7200 1450 2    50   ~ 0
+ServoRX
+NoConn ~ 7200 1150
+NoConn ~ 7200 1250
+Wire Notes Line
+	850  7750 2650 7750
+Wire Notes Line
+	2650 7750 2650 5000
+Wire Notes Line
+	2650 5000 850  5000
+Wire Notes Line
+	850  5000 850  7750
+Text Notes 850  5000 0    50   ~ 0
+3.3v to 5V converter
+$Comp
+L power:GND #PWR0105
+U 1 1 5BF9B24C
+P 7200 2700
+F 0 "#PWR0105" H 7200 2450 50  0001 C CNN
+F 1 "GND" V 7205 2572 50  0000 R CNN
+F 2 "" H 7200 2700 50  0001 C CNN
+F 3 "" H 7200 2700 50  0001 C CNN
+	1    7200 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Regulator_Linear:TC1262-33 U2
+U 1 1 5BF9B3FE
+P 7650 4000
+F 0 "U2" H 7650 4242 50  0000 C CNN
+F 1 "TC1262-33" H 7650 4151 50  0000 C CNN
+F 2 "digikey-footprints:SOT-223" H 7650 4225 50  0001 C CIN
+F 3 "" H 7650 3700 50  0001 C CNN
+	1    7650 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 5BF9B515
+P 7350 4000
+F 0 "#PWR0106" H 7350 3850 50  0001 C CNN
+F 1 "+5V" V 7365 4128 50  0000 L CNN
+F 2 "" H 7350 4000 50  0001 C CNN
+F 3 "" H 7350 4000 50  0001 C CNN
+	1    7350 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0107
+U 1 1 5BF9B580
+P 7950 4000
+F 0 "#PWR0107" H 7950 3850 50  0001 C CNN
+F 1 "+3V3" V 7965 4128 50  0000 L CNN
+F 2 "" H 7950 4000 50  0001 C CNN
+F 3 "" H 7950 4000 50  0001 C CNN
+	1    7950 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5BF9B5D5
+P 7650 4300
+F 0 "#PWR0108" H 7650 4050 50  0001 C CNN
+F 1 "GND" H 7655 4127 50  0000 C CNN
+F 2 "" H 7650 4300 50  0001 C CNN
+F 3 "" H 7650 4300 50  0001 C CNN
+	1    7650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0109
+U 1 1 5BF9B99E
+P 8100 2800
+F 0 "#PWR0109" H 8100 2650 50  0001 C CNN
+F 1 "+3V3" V 8115 2928 50  0000 L CNN
+F 2 "" H 8100 2800 50  0001 C CNN
+F 3 "" H 8100 2800 50  0001 C CNN
+	1    8100 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 5BF9B9EC
+P 8100 2900
+F 0 "#PWR0110" H 8100 2750 50  0001 C CNN
+F 1 "+3V3" V 8115 3028 50  0000 L CNN
+F 2 "" H 8100 2900 50  0001 C CNN
+F 3 "" H 8100 2900 50  0001 C CNN
+	1    8100 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5BF9BA4C
+P 8100 2700
+F 0 "#PWR0111" H 8100 2450 50  0001 C CNN
+F 1 "GND" V 8105 2572 50  0000 R CNN
+F 2 "" H 8100 2700 50  0001 C CNN
+F 3 "" H 8100 2700 50  0001 C CNN
+	1    8100 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5BF9BAC6
+P 7200 2800
+F 0 "#PWR0112" H 7200 2550 50  0001 C CNN
+F 1 "GND" V 7205 2672 50  0000 R CNN
+F 2 "" H 7200 2800 50  0001 C CNN
+F 3 "" H 7200 2800 50  0001 C CNN
+	1    7200 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5BF9BB35
+P 5300 1000
+F 0 "#PWR0113" H 5300 750 50  0001 C CNN
+F 1 "GND" V 5305 872 50  0000 R CNN
+F 2 "" H 5300 1000 50  0001 C CNN
+F 3 "" H 5300 1000 50  0001 C CNN
+	1    5300 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5BF9BB99
+P 5300 1100
+F 0 "#PWR0114" H 5300 850 50  0001 C CNN
+F 1 "GND" V 5305 972 50  0000 R CNN
+F 2 "" H 5300 1100 50  0001 C CNN
+F 3 "" H 5300 1100 50  0001 C CNN
+	1    5300 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5BF9BBFD
+P 4150 2800
+F 0 "#PWR0115" H 4150 2550 50  0001 C CNN
+F 1 "GND" V 4155 2672 50  0000 R CNN
+F 2 "" H 4150 2800 50  0001 C CNN
+F 3 "" H 4150 2800 50  0001 C CNN
+	1    4150 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0116
+U 1 1 5BF9BC52
+P 4150 2700
+F 0 "#PWR0116" H 4150 2550 50  0001 C CNN
+F 1 "+5V" V 4165 2828 50  0000 L CNN
+F 2 "" H 4150 2700 50  0001 C CNN
+F 3 "" H 4150 2700 50  0001 C CNN
+	1    4150 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5BF9C055
+P 2050 1150
+F 0 "D1" H 2042 895 50  0000 C CNN
+F 1 "LED_RED" H 2042 986 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.07x1.80mm_HandSolder" H 2050 1150 50  0001 C CNN
+F 3 "" H 2050 1150 50  0001 C CNN
+	1    2050 1150
+	-1   0    0    1   
+$EndComp
+Text Label 5300 2800 0    50   ~ 0
+HardFault
+Text Label 5300 2700 0    50   ~ 0
+ComOk
+Text Label 5300 2600 0    50   ~ 0
+µCOk
+$Comp
+L power:+3V3 #PWR0117
+U 1 1 5BF9C3A1
+P 1250 1150
+F 0 "#PWR0117" H 1250 1000 50  0001 C CNN
+F 1 "+3V3" V 1265 1278 50  0000 L CNN
+F 2 "" H 1250 1150 50  0001 C CNN
+F 3 "" H 1250 1150 50  0001 C CNN
+	1    1250 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5BF9C438
+P 1650 1150
+F 0 "R5" V 1443 1150 50  0000 C CNN
+F 1 "100R" V 1534 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 1580 1150 50  0001 C CNN
+F 3 "" H 1650 1150 50  0001 C CNN
+	1    1650 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:2N2222 Q3
+U 1 1 5BF9CE6F
+P 2500 1250
+F 0 "Q3" V 2847 1250 60  0000 C CNN
+F 1 "2N2222" V 2741 1250 60  0000 C CNN
+F 2 "digikey-footprints:TO-18-3" H 2700 1450 60  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221.PDF" H 2700 1550 60  0001 L CNN
+F 4 "2N2222CS-ND" H 2700 1650 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N2222" H 2700 1750 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2700 1850 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2700 1950 60  0001 L CNN "Family"
+F 8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221.PDF" H 2700 2050 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/central-semiconductor-corp/2N2222/2N2222CS-ND/4806844" H 2700 2150 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 30V 0.8A TO-18" H 2700 2250 60  0001 L CNN "Description"
+F 11 "Central Semiconductor Corp" H 2700 2350 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2700 2450 60  0001 L CNN "Status"
+	1    2500 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BF9D7FE
+P 2500 1700
+F 0 "R6" H 2570 1746 50  0000 L CNN
+F 1 "1kR" H 2570 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 2430 1700 50  0001 C CNN
+F 3 "" H 2500 1700 50  0001 C CNN
+	1    2500 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1150 1500 1150
+$Comp
+L power:GND #PWR0118
+U 1 1 5BF9E768
+P 2900 1150
+F 0 "#PWR0118" H 2900 900 50  0001 C CNN
+F 1 "GND" H 2905 977 50  0000 C CNN
+F 2 "" H 2900 1150 50  0001 C CNN
+F 3 "" H 2900 1150 50  0001 C CNN
+	1    2900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1150 1900 1150
+Wire Wire Line
+	2200 1150 2300 1150
+Wire Wire Line
+	2700 1150 2900 1150
+Wire Wire Line
+	2500 1450 2500 1550
+Text Label 2500 1950 0    50   ~ 0
+HardFault
+Wire Wire Line
+	2500 1850 2500 1950
+$Comp
+L Device:LED D2
+U 1 1 5BFA0567
+P 2100 2300
+F 0 "D2" H 2092 2045 50  0000 C CNN
+F 1 "LED_YELLOW" H 2092 2136 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.07x1.80mm_HandSolder" H 2100 2300 50  0001 C CNN
+F 3 "" H 2100 2300 50  0001 C CNN
+	1    2100 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0119
+U 1 1 5BFA056D
+P 1300 2300
+F 0 "#PWR0119" H 1300 2150 50  0001 C CNN
+F 1 "+3V3" V 1315 2428 50  0000 L CNN
+F 2 "" H 1300 2300 50  0001 C CNN
+F 3 "" H 1300 2300 50  0001 C CNN
+	1    1300 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5BFA0573
+P 1700 2300
+F 0 "R7" V 1493 2300 50  0000 C CNN
+F 1 "100R" V 1584 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 1630 2300 50  0001 C CNN
+F 3 "" H 1700 2300 50  0001 C CNN
+	1    1700 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:2N2222 Q4
+U 1 1 5BFA0582
+P 2550 2400
+F 0 "Q4" V 2897 2400 60  0000 C CNN
+F 1 "2N2222" V 2791 2400 60  0000 C CNN
+F 2 "digikey-footprints:TO-18-3" H 2750 2600 60  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221.PDF" H 2750 2700 60  0001 L CNN
+F 4 "2N2222CS-ND" H 2750 2800 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N2222" H 2750 2900 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2750 3000 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2750 3100 60  0001 L CNN "Family"
+F 8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221.PDF" H 2750 3200 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/central-semiconductor-corp/2N2222/2N2222CS-ND/4806844" H 2750 3300 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 30V 0.8A TO-18" H 2750 3400 60  0001 L CNN "Description"
+F 11 "Central Semiconductor Corp" H 2750 3500 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2750 3600 60  0001 L CNN "Status"
+	1    2550 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5BFA0588
+P 2550 2850
+F 0 "R8" H 2620 2896 50  0000 L CNN
+F 1 "1kR" H 2620 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 2480 2850 50  0001 C CNN
+F 3 "" H 2550 2850 50  0001 C CNN
+	1    2550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2300 1550 2300
+$Comp
+L power:GND #PWR0120
+U 1 1 5BFA058F
+P 2950 2300
+F 0 "#PWR0120" H 2950 2050 50  0001 C CNN
+F 1 "GND" H 2955 2127 50  0000 C CNN
+F 2 "" H 2950 2300 50  0001 C CNN
+F 3 "" H 2950 2300 50  0001 C CNN
+	1    2950 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2300 1950 2300
+Wire Wire Line
+	2250 2300 2350 2300
+Wire Wire Line
+	2750 2300 2950 2300
+Wire Wire Line
+	2550 2600 2550 2700
+Text Label 2550 3100 0    50   ~ 0
+ComOK
+Wire Wire Line
+	2550 3000 2550 3100
+$Comp
+L Device:LED D3
+U 1 1 5BFA1257
+P 2150 3450
+F 0 "D3" H 2142 3195 50  0000 C CNN
+F 1 "LED_GREEN" H 2142 3286 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.07x1.80mm_HandSolder" H 2150 3450 50  0001 C CNN
+F 3 "" H 2150 3450 50  0001 C CNN
+	1    2150 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0121
+U 1 1 5BFA125D
+P 1350 3450
+F 0 "#PWR0121" H 1350 3300 50  0001 C CNN
+F 1 "+3V3" V 1365 3578 50  0000 L CNN
+F 2 "" H 1350 3450 50  0001 C CNN
+F 3 "" H 1350 3450 50  0001 C CNN
+	1    1350 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5BFA1263
+P 1750 3450
+F 0 "R9" V 1543 3450 50  0000 C CNN
+F 1 "100R" V 1634 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 1680 3450 50  0001 C CNN
+F 3 "" H 1750 3450 50  0001 C CNN
+	1    1750 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:2N2222 Q5
+U 1 1 5BFA1272
+P 2600 3550
+F 0 "Q5" V 2947 3550 60  0000 C CNN
+F 1 "2N2222" V 2841 3550 60  0000 C CNN
+F 2 "digikey-footprints:TO-18-3" H 2800 3750 60  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221.PDF" H 2800 3850 60  0001 L CNN
+F 4 "2N2222CS-ND" H 2800 3950 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N2222" H 2800 4050 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2800 4150 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2800 4250 60  0001 L CNN "Family"
+F 8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221.PDF" H 2800 4350 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/central-semiconductor-corp/2N2222/2N2222CS-ND/4806844" H 2800 4450 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 30V 0.8A TO-18" H 2800 4550 60  0001 L CNN "Description"
+F 11 "Central Semiconductor Corp" H 2800 4650 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2800 4750 60  0001 L CNN "Status"
+	1    2600 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5BFA1278
+P 2600 4000
+F 0 "R10" H 2670 4046 50  0000 L CNN
+F 1 "1kR" H 2670 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 2530 4000 50  0001 C CNN
+F 3 "" H 2600 4000 50  0001 C CNN
+	1    2600 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3450 1600 3450
+$Comp
+L power:GND #PWR0122
+U 1 1 5BFA127F
+P 3000 3450
+F 0 "#PWR0122" H 3000 3200 50  0001 C CNN
+F 1 "GND" H 3005 3277 50  0000 C CNN
+F 2 "" H 3000 3450 50  0001 C CNN
+F 3 "" H 3000 3450 50  0001 C CNN
+	1    3000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3450 2000 3450
+Wire Wire Line
+	2300 3450 2400 3450
+Wire Wire Line
+	2800 3450 3000 3450
+Wire Wire Line
+	2600 3750 2600 3850
+Text Label 2600 4250 0    50   ~ 0
+µCOK
+Wire Wire Line
+	2600 4150 2600 4250
+Wire Notes Line
+	800  850  3100 850 
+Wire Notes Line
+	3100 4850 800  4850
+Text Notes 800  850  0    50   ~ 0
+Led Indicators
+$Comp
+L Device:LED D4
+U 1 1 5BFA4A72
+P 2150 4550
+F 0 "D4" H 2142 4295 50  0000 C CNN
+F 1 "LED_GREEN" H 2142 4386 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.07x1.80mm_HandSolder" H 2150 4550 50  0001 C CNN
+F 3 "" H 2150 4550 50  0001 C CNN
+	1    2150 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0123
+U 1 1 5BFA4A78
+P 1350 4550
+F 0 "#PWR0123" H 1350 4400 50  0001 C CNN
+F 1 "+3V3" V 1365 4678 50  0000 L CNN
+F 2 "" H 1350 4550 50  0001 C CNN
+F 3 "" H 1350 4550 50  0001 C CNN
+	1    1350 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5BFA4A7E
+P 1750 4550
+F 0 "R11" V 1543 4550 50  0000 C CNN
+F 1 "100R" V 1634 4550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 1680 4550 50  0001 C CNN
+F 3 "" H 1750 4550 50  0001 C CNN
+	1    1750 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 4550 1600 4550
+$Comp
+L power:GND #PWR0124
+U 1 1 5BFA4A9A
+P 3000 4550
+F 0 "#PWR0124" H 3000 4300 50  0001 C CNN
+F 1 "GND" H 3005 4377 50  0000 C CNN
+F 2 "" H 3000 4550 50  0001 C CNN
+F 3 "" H 3000 4550 50  0001 C CNN
+	1    3000 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 4550 2000 4550
+Wire Wire Line
+	2300 4550 3000 4550
+Wire Notes Line
+	3100 850  3100 4850
+Wire Notes Line
+	800  850  800  4850
+$Comp
+L power:GND #PWR0125
+U 1 1 5BFABE26
+P 7400 1950
+F 0 "#PWR0125" H 7400 1700 50  0001 C CNN
+F 1 "GND" V 7405 1822 50  0000 R CNN
+F 2 "" H 7400 1950 50  0001 C CNN
+F 3 "" H 7400 1950 50  0001 C CNN
+	1    7400 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0126
+U 1 1 5BFABEB3
+P 7400 1850
+F 0 "#PWR0126" H 7400 1700 50  0001 C CNN
+F 1 "+5V" V 7415 1978 50  0000 L CNN
+F 2 "" H 7400 1850 50  0001 C CNN
+F 3 "" H 7400 1850 50  0001 C CNN
+	1    7400 1850
+	0    -1   -1   0   
+$EndComp
+Text Label 8100 3100 0    50   ~ 0
+MISO
+Text Label 7200 3000 2    50   ~ 0
+SCLK
+Text Label 7200 2900 2    50   ~ 0
+MOSI
+Text Label 7200 3100 2    50   ~ 0
+CS
+Text Label 4050 2200 2    50   ~ 0
+MOSI
+Text Label 4050 2100 2    50   ~ 0
+MISO
+Text Label 4050 2000 2    50   ~ 0
+SCK
+Text Label 4050 2500 2    50   ~ 0
+CS
+Wire Wire Line
+	4150 2000 4050 2000
+Wire Wire Line
+	4050 2100 4150 2100
+Wire Wire Line
+	4050 2200 4150 2200
+Wire Wire Line
+	4050 2500 4150 2500
+NoConn ~ 8100 3000
+NoConn ~ 7200 3200
+Wire Wire Line
+	4150 1500 4050 1500
+Wire Wire Line
+	4150 1600 4050 1600
+Text Label 4050 1500 2    50   ~ 0
+µCTX
+Text Label 4050 1600 2    50   ~ 0
+µCRX
+NoConn ~ 5300 1200
+NoConn ~ 5300 1300
+NoConn ~ 5300 1400
+NoConn ~ 5300 1500
+NoConn ~ 5300 1600
+NoConn ~ 5300 1700
+NoConn ~ 5300 1800
+NoConn ~ 5300 1900
+NoConn ~ 5300 2000
+NoConn ~ 5300 2100
+NoConn ~ 5300 2200
+NoConn ~ 5300 2300
+NoConn ~ 5300 2400
+NoConn ~ 5300 2500
+NoConn ~ 5300 2900
+NoConn ~ 4150 2900
+NoConn ~ 4150 2600
+NoConn ~ 4150 2400
+NoConn ~ 4150 2300
+NoConn ~ 4150 1900
+NoConn ~ 4150 1800
+NoConn ~ 4150 1700
+NoConn ~ 4150 1400
+NoConn ~ 4150 1300
+NoConn ~ 4150 1200
+NoConn ~ 4150 1100
+NoConn ~ 4150 1000
+$Comp
+L @Robot:black_pill #U07
+U 1 1 5BF9B70D
+P 4750 1950
+F 0 "#U07" H 4725 3165 50  0000 C CNN
+F 1 "black_pill" H 4725 3074 50  0000 C CNN
+F 2 "" H 4750 1950 50  0001 C CNN
+F 3 "" H 4750 1950 50  0001 C CNN
+	1    4750 1950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
