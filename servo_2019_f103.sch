@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
+LIBS:servo_2019_f103-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Carte Servo 2018"
+Date "2019-01-20"
+Rev "1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -105,38 +106,6 @@ Text Notes 900  3000 0    118  ~ 0
 Microcontrolleur
 Wire Notes Line
 	600  2650 2700 2650
-$Comp
-L Connector_Generic:Conn_01x03 J8
-U 1 1 5BEDF7D1
-P 8100 1550
-F 0 "J8" H 8020 1225 50  0000 C CNN
-F 1 "Liaison serie" H 8020 1316 50  0000 C CNN
-F 2 "@Robot:HE14-3-straight" H 8100 1550 50  0001 C CNN
-F 3 "~" H 8100 1550 50  0001 C CNN
-	1    8100 1550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8300 1650 8400 1650
-Wire Wire Line
-	8300 1550 8400 1550
-Wire Wire Line
-	8300 1450 8400 1450
-$Comp
-L power:GND #PWR035
-U 1 1 5BEE094F
-P 8400 1650
-F 0 "#PWR035" H 8400 1400 50  0001 C CNN
-F 1 "GND" H 8405 1477 50  0000 C CNN
-F 2 "" H 8400 1650 50  0001 C CNN
-F 3 "" H 8400 1650 50  0001 C CNN
-	1    8400 1650
-	1    0    0    -1  
-$EndComp
-Text Label 8400 1550 0    50   ~ 0
-RX
-Text Label 8400 1450 0    50   ~ 0
-TX
 Text Notes 6450 1000 0    118  ~ 0
 Connectique
 Wire Notes Line
@@ -316,7 +285,7 @@ L Device:R R2
 U 1 1 5C0A8909
 P 9350 1200
 F 0 "R2" H 9420 1246 50  0000 L CNN
-F 1 "R" H 9420 1155 50  0000 L CNN
+F 1 "10kR" H 9420 1155 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9280 1200 50  0001 C CNN
 F 3 "~" H 9350 1200 50  0001 C CNN
 	1    9350 1200
@@ -327,7 +296,7 @@ L Device:R R3
 U 1 1 5C0A8CC9
 P 10450 1200
 F 0 "R3" H 10520 1246 50  0000 L CNN
-F 1 "R" H 10520 1155 50  0000 L CNN
+F 1 "10kR" H 10520 1155 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10380 1200 50  0001 C CNN
 F 3 "~" H 10450 1200 50  0001 C CNN
 	1    10450 1200
@@ -386,8 +355,8 @@ $Comp
 L Connector:Conn_01x20_Female J1
 U 1 1 5C0965A6
 P 1250 4100
-F 0 "J1" H 1277 4076 50  0000 L CNN
-F 1 "Conn_01x20_Female" H 1277 3985 50  0000 L CNN
+F 0 "J1" H 1050 2850 50  0000 L CNN
+F 1 "Conn_01x20_Female" H 1000 2950 50  0000 L CNN
 F 2 "@Robot:PinSocket_1x20_P2.54mm_Vertical_Long_Pads" H 1250 4100 50  0001 C CNN
 F 3 "~" H 1250 4100 50  0001 C CNN
 	1    1250 4100
@@ -435,28 +404,6 @@ F 1 "+5V" V 1065 5028 50  0000 L CNN
 F 2 "" H 1050 4900 50  0001 C CNN
 F 3 "" H 1050 4900 50  0001 C CNN
 	1    1050 4900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR03
-U 1 1 5C0A8845
-P 1050 5100
-F 0 "#PWR03" H 1050 4950 50  0001 C CNN
-F 1 "+3.3V" V 1065 5228 50  0000 L CNN
-F 2 "" H 1050 5100 50  0001 C CNN
-F 3 "" H 1050 5100 50  0001 C CNN
-	1    1050 5100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR010
-U 1 1 5C0AB8D9
-P 2200 3400
-F 0 "#PWR010" H 2200 3250 50  0001 C CNN
-F 1 "+3.3V" V 2215 3528 50  0000 L CNN
-F 2 "" H 2200 3400 50  0001 C CNN
-F 3 "" H 2200 3400 50  0001 C CNN
-	1    2200 3400
 	0    -1   -1   0   
 $EndComp
 Wire Notes Line
@@ -513,19 +460,14 @@ $Comp
 L Connector:Conn_01x20_Female J4
 U 1 1 5C096C54
 P 2400 4100
-F 0 "J4" H 2427 4076 50  0000 L CNN
-F 1 "Conn_01x20_Female" H 2427 3985 50  0000 L CNN
+F 0 "J4" H 2250 2850 50  0000 L CNN
+F 1 "Conn_01x20_Female" H 2200 2950 50  0000 L CNN
 F 2 "@Robot:PinSocket_1x20_P2.54mm_Vertical_Long_Pads" H 2400 4100 50  0001 C CNN
 F 3 "~" H 2400 4100 50  0001 C CNN
 	1    2400 4100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7450 1700
-NoConn ~ 6550 1500
-NoConn ~ 6550 1600
-NoConn ~ 6550 1700
 NoConn ~ 6550 1800
-NoConn ~ 8400 1550
 $Comp
 L power:PWR_FLAG #FLG04
 U 1 1 5C23BD88
@@ -643,17 +585,10 @@ NoConn ~ 2200 4200
 NoConn ~ 2200 4100
 NoConn ~ 2200 4000
 NoConn ~ 2200 3900
-NoConn ~ 2200 3800
-NoConn ~ 2200 3700
-NoConn ~ 2200 3600
 NoConn ~ 2200 3500
 NoConn ~ 1050 4800
 NoConn ~ 1050 4700
-NoConn ~ 1050 4600
 NoConn ~ 1050 4500
-NoConn ~ 1050 4400
-NoConn ~ 1050 4300
-NoConn ~ 1050 4200
 NoConn ~ 1050 4100
 NoConn ~ 1050 4000
 NoConn ~ 1050 3900
@@ -662,7 +597,6 @@ NoConn ~ 1050 3700
 NoConn ~ 1050 3600
 NoConn ~ 1050 3500
 NoConn ~ 1050 3400
-NoConn ~ 1050 3300
 NoConn ~ 1050 3200
 $Comp
 L Device:Q_NMOS_GSD Q1
@@ -675,75 +609,8 @@ F 3 "~" H 3950 4600 50  0001 C CNN
 	1    3950 4600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:LED D2
-U 1 1 5C36A160
-P 5350 4150
-F 0 "D2" V 5388 4033 50  0000 R CNN
-F 1 "LED_communication_vert" V 5297 4033 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5350 4150 50  0001 C CNN
-F 3 "~" H 5350 4150 50  0001 C CNN
-	1    5350 4150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5C36A167
-P 5350 3750
-F 0 "R4" H 5420 3796 50  0000 L CNN
-F 1 "150" H 5420 3705 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5280 3750 50  0001 C CNN
-F 3 "~" H 5350 3750 50  0001 C CNN
-	1    5350 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 3600 5350 3500
-Wire Wire Line
-	5050 4600 4950 4600
-Wire Wire Line
-	5350 4800 5350 4900
-Wire Wire Line
-	5350 4400 5350 4300
-Wire Wire Line
-	5350 3900 5350 4000
-$Comp
-L power:GND #PWR021
-U 1 1 5C36A173
-P 5350 4900
-F 0 "#PWR021" H 5350 4650 50  0001 C CNN
-F 1 "GND" H 5355 4727 50  0000 C CNN
-F 2 "" H 5350 4900 50  0001 C CNN
-F 3 "" H 5350 4900 50  0001 C CNN
-	1    5350 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR020
-U 1 1 5C36A179
-P 5350 3500
-F 0 "#PWR020" H 5350 3350 50  0001 C CNN
-F 1 "+5V" H 5365 3673 50  0000 C CNN
-F 2 "" H 5350 3500 50  0001 C CNN
-F 3 "" H 5350 3500 50  0001 C CNN
-	1    5350 3500
-	1    0    0    -1  
-$EndComp
 Text Notes 4550 4750 0    39   ~ 0
 input : 3.3v ou 5v
-Text Label 4950 4600 1    39   ~ 0
-TX
-$Comp
-L Device:Q_NMOS_GSD Q3
-U 1 1 5C36A181
-P 5250 4600
-F 0 "Q3" H 5456 4646 50  0000 L CNN
-F 1 "PMF370XN" H 5456 4555 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 5450 4700 50  0001 C CNN
-F 3 "~" H 5250 4600 50  0001 C CNN
-	1    5250 4600
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:LED D3
 U 1 1 5C36B30F
@@ -798,8 +665,6 @@ F 3 "" H 6800 3500 50  0001 C CNN
 	1    6800 3500
 	1    0    0    -1  
 $EndComp
-Text Notes 6000 4750 0    39   ~ 0
-input : 3.3v ou 5v
 Text Label 6400 4600 1    39   ~ 0
 led_feedback
 $Comp
@@ -868,10 +733,10 @@ Wire Wire Line
 NoConn ~ 3650 4600
 NoConn ~ 6400 4600
 $Comp
-L Transistor_FET:2N7000 Q?
+L Transistor_FET:2N7000 Q5
 U 1 1 5C44DDB0
 P 9900 2150
-F 0 "Q?" V 10150 2150 50  0000 C CNN
+F 0 "Q5" V 10150 2150 50  0000 C CNN
 F 1 "2N7000" V 10241 2150 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10100 2075 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9900 2150 50  0001 L CNN
@@ -879,23 +744,23 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9900 2150 50  000
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 5C44DDB7
 P 9350 2100
-F 0 "R?" H 9420 2146 50  0000 L CNN
-F 1 "R" H 9420 2055 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9280 2100 50  0001 C CNN
+F 0 "R7" H 9420 2146 50  0000 L CNN
+F 1 "10kR" H 9420 2055 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.39x1.80mm_HandSolder" V 9280 2100 50  0001 C CNN
 F 3 "~" H 9350 2100 50  0001 C CNN
 	1    9350 2100
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R8
 U 1 1 5C44DDBE
 P 10450 2100
-F 0 "R?" H 10520 2146 50  0000 L CNN
-F 1 "R" H 10520 2055 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10380 2100 50  0001 C CNN
+F 0 "R8" H 10520 2146 50  0000 L CNN
+F 1 "10kR" H 10520 2055 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.39x1.80mm_HandSolder" V 10380 2100 50  0001 C CNN
 F 3 "~" H 10450 2100 50  0001 C CNN
 	1    10450 2100
 	1    0    0    -1  
@@ -915,10 +780,10 @@ Connection ~ 10450 2250
 Wire Wire Line
 	10450 2250 10600 2250
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0101
 U 1 1 5C44DDCD
 P 9350 1900
-F 0 "#PWR?" H 9350 1750 50  0001 C CNN
+F 0 "#PWR0101" H 9350 1750 50  0001 C CNN
 F 1 "+3.3V" H 9365 2073 50  0000 C CNN
 F 2 "" H 9350 1900 50  0001 C CNN
 F 3 "" H 9350 1900 50  0001 C CNN
@@ -926,10 +791,10 @@ F 3 "" H 9350 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0102
 U 1 1 5C44DDD3
 P 10450 1900
-F 0 "#PWR?" H 10450 1750 50  0001 C CNN
+F 0 "#PWR0102" H 10450 1750 50  0001 C CNN
 F 1 "+5V" H 10465 2073 50  0000 C CNN
 F 2 "" H 10450 1900 50  0001 C CNN
 F 3 "" H 10450 1900 50  0001 C CNN
@@ -945,4 +810,45 @@ Text Notes 9550 1800 0    50   ~ 0
 logic level converter
 Text Label 9200 2250 2    50   ~ 0
 3.3V_logic_rx
+Text Label 2200 3700 2    50   ~ 0
+3.3V_logic_tx
+Text Label 2200 3600 2    50   ~ 0
+3.3V_logic_rx
+$Comp
+L @Robot:servo_connector U3
+U 1 1 5C44D4A4
+P 7400 2200
+F 0 "U3" H 7628 2251 50  0000 L CNN
+F 1 "servo_connector" H 7628 2160 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 7400 2450 50  0001 C CNN
+F 3 "" H 7400 2450 50  0001 C CNN
+	1    7400 2200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7150 2150
+Text Label 7150 2350 2    50   ~ 0
+5V_logic_tx
+Text Label 7150 2250 2    50   ~ 0
+5V_logic_rx
+Text Label 1050 4200 2    50   ~ 0
+sck
+Text Label 1050 4300 2    50   ~ 0
+miso
+Text Label 1050 4400 2    50   ~ 0
+mosi
+Text Label 6550 1600 2    50   ~ 0
+sck
+Text Label 6550 1500 2    50   ~ 0
+mosi
+Text Label 7450 1700 0    50   ~ 0
+miso
+Text Label 1050 3300 2    50   ~ 0
+cs
+Text Label 6550 1700 2    50   ~ 0
+cs
+NoConn ~ 1050 5100
+NoConn ~ 2200 3400
+Text Label 1050 4600 2    50   ~ 0
+led_hardfault
+NoConn ~ 2200 3800
 $EndSCHEMATC
