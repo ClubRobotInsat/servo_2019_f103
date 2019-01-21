@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:servo_2019_f103-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -573,20 +574,14 @@ Text Notes 1300 3200 0    50   ~ 0
 B12
 NoConn ~ 2200 5100
 NoConn ~ 2200 5000
-NoConn ~ 2200 4900
 NoConn ~ 2200 4800
 NoConn ~ 2200 4700
 NoConn ~ 2200 4600
 NoConn ~ 2200 4500
 NoConn ~ 2200 4400
-NoConn ~ 2200 4300
-NoConn ~ 2200 4200
 NoConn ~ 2200 4100
-NoConn ~ 2200 4000
-NoConn ~ 2200 3900
 NoConn ~ 2200 3500
 NoConn ~ 1050 4800
-NoConn ~ 1050 4700
 NoConn ~ 1050 4500
 NoConn ~ 1050 4100
 NoConn ~ 1050 4000
@@ -729,8 +724,6 @@ Text Notes 7300 4750 0    39   ~ 0
 input : 3.3v ou 5v
 Wire Wire Line
 	8100 4300 8100 4900
-NoConn ~ 3650 4600
-NoConn ~ 6400 4600
 $Comp
 L Transistor_FET:2N7000 Q5
 U 1 1 5C44DDB0
@@ -850,4 +843,66 @@ NoConn ~ 2200 3400
 Text Label 1050 4600 2    50   ~ 0
 led_hardfault
 NoConn ~ 2200 3800
+Text Label 2100 4900 2    39   ~ 0
+led_feedback
+Wire Wire Line
+	2200 4900 2100 4900
+NoConn ~ 7150 2050
+$Comp
+L power:+3V3 #PWR03
+U 1 1 5C46E223
+P 2200 3900
+F 0 "#PWR03" H 2200 3750 50  0001 C CNN
+F 1 "+3V3" V 2215 4028 50  0000 L CNN
+F 2 "" H 2200 3900 50  0001 C CNN
+F 3 "" H 2200 3900 50  0001 C CNN
+	1    2200 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR04
+U 1 1 5C46E446
+P 2200 4000
+F 0 "#PWR04" H 2200 3850 50  0001 C CNN
+F 1 "+3V3" V 2215 4128 50  0000 L CNN
+F 2 "" H 2200 4000 50  0001 C CNN
+F 3 "" H 2200 4000 50  0001 C CNN
+	1    2200 4000
+	0    -1   -1   0   
+$EndComp
+Text Notes 750  5550 0    50   ~ 0
+Les pins 8 et 9 au 3.3v permettent de faire passer une piste de part et d’autre du connecteur\nPareil pour le 11, 12 & 16 du J1\n
+$Comp
+L power:GND #PWR0103
+U 1 1 5C470379
+P 2200 4200
+F 0 "#PWR0103" H 2200 3950 50  0001 C CNN
+F 1 "GND" V 2205 4072 50  0000 R CNN
+F 2 "" H 2200 4200 50  0001 C CNN
+F 3 "" H 2200 4200 50  0001 C CNN
+	1    2200 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5C470544
+P 2200 4300
+F 0 "#PWR0104" H 2200 4050 50  0001 C CNN
+F 1 "GND" V 2205 4172 50  0000 R CNN
+F 2 "" H 2200 4300 50  0001 C CNN
+F 3 "" H 2200 4300 50  0001 C CNN
+	1    2200 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C47134C
+P 1050 4700
+F 0 "#PWR?" H 1050 4450 50  0001 C CNN
+F 1 "GND" V 1055 4572 50  0000 R CNN
+F 2 "" H 1050 4700 50  0001 C CNN
+F 3 "" H 1050 4700 50  0001 C CNN
+	1    1050 4700
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
