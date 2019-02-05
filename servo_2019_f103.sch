@@ -574,12 +574,6 @@ Text Notes 1300 3200 0    50   ~ 0
 B12
 NoConn ~ 2200 5100
 NoConn ~ 2200 5000
-NoConn ~ 2200 4800
-NoConn ~ 2200 4700
-NoConn ~ 2200 4600
-NoConn ~ 2200 4500
-NoConn ~ 2200 4400
-NoConn ~ 2200 4100
 NoConn ~ 2200 3500
 NoConn ~ 1050 4800
 NoConn ~ 1050 4500
@@ -807,7 +801,7 @@ Text Label 2200 3700 2    50   ~ 0
 Text Label 2200 3600 2    50   ~ 0
 3.3V_logic_rx
 $Comp
-L @Robot:servo_connector U3
+L servo_2019_f103-rescue:servo_connector-@Robot U3
 U 1 1 5C44D4A4
 P 7400 2200
 F 0 "U3" H 7628 2251 50  0000 L CNN
@@ -822,11 +816,11 @@ Text Label 7150 2350 2    50   ~ 0
 5V_logic_tx
 Text Label 7150 2250 2    50   ~ 0
 5V_logic_rx
-Text Label 1050 4200 2    50   ~ 0
+Text Label 2200 4200 2    50   ~ 0
 sck
-Text Label 1050 4300 2    50   ~ 0
+Text Label 2200 4100 2    50   ~ 0
 miso
-Text Label 1050 4400 2    50   ~ 0
+Text Label 2200 4000 2    50   ~ 0
 mosi
 Text Label 6550 1600 2    50   ~ 0
 sck
@@ -842,7 +836,6 @@ NoConn ~ 1050 5100
 NoConn ~ 2200 3400
 Text Label 1050 4600 2    50   ~ 0
 led_hardfault
-NoConn ~ 2200 3800
 Text Label 2100 4900 2    39   ~ 0
 led_feedback
 Wire Wire Line
@@ -851,58 +844,76 @@ NoConn ~ 7150 2050
 $Comp
 L power:+3V3 #PWR03
 U 1 1 5C46E223
-P 2200 3900
-F 0 "#PWR03" H 2200 3750 50  0001 C CNN
-F 1 "+3V3" V 2215 4028 50  0000 L CNN
-F 2 "" H 2200 3900 50  0001 C CNN
-F 3 "" H 2200 3900 50  0001 C CNN
-	1    2200 3900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3V3 #PWR04
-U 1 1 5C46E446
-P 2200 4000
-F 0 "#PWR04" H 2200 3850 50  0001 C CNN
-F 1 "+3V3" V 2215 4128 50  0000 L CNN
-F 2 "" H 2200 4000 50  0001 C CNN
-F 3 "" H 2200 4000 50  0001 C CNN
-	1    2200 4000
+P 2200 4400
+F 0 "#PWR03" H 2200 4250 50  0001 C CNN
+F 1 "+3V3" V 2200 4550 50  0000 L CNN
+F 2 "" H 2200 4400 50  0001 C CNN
+F 3 "" H 2200 4400 50  0001 C CNN
+	1    2200 4400
 	0    -1   -1   0   
 $EndComp
 Text Notes 750  5550 0    50   ~ 0
 Les pins 8 et 9 au 3.3v permettent de faire passer une piste de part et d’autre du connecteur\nPareil pour le 11, 12 & 16 du J1\n
 $Comp
 L power:GND #PWR0103
-U 1 1 5C470379
-P 2200 4200
-F 0 "#PWR0103" H 2200 3950 50  0001 C CNN
-F 1 "GND" V 2205 4072 50  0000 R CNN
-F 2 "" H 2200 4200 50  0001 C CNN
-F 3 "" H 2200 4200 50  0001 C CNN
-	1    2200 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 5C470544
-P 2200 4300
-F 0 "#PWR0104" H 2200 4050 50  0001 C CNN
-F 1 "GND" V 2205 4172 50  0000 R CNN
-F 2 "" H 2200 4300 50  0001 C CNN
-F 3 "" H 2200 4300 50  0001 C CNN
-	1    2200 4300
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
 U 1 1 5C47134C
 P 1050 4700
-F 0 "#PWR?" H 1050 4450 50  0001 C CNN
+F 0 "#PWR0103" H 1050 4450 50  0001 C CNN
 F 1 "GND" V 1055 4572 50  0000 R CNN
 F 2 "" H 1050 4700 50  0001 C CNN
 F 3 "" H 1050 4700 50  0001 C CNN
 	1    1050 4700
+	0    1    1    0   
+$EndComp
+NoConn ~ 2200 4300
+NoConn ~ 1050 4400
+NoConn ~ 1050 4300
+NoConn ~ 1050 4200
+NoConn ~ 2200 3900
+Text Label 2200 3800 2    50   ~ 0
+miso
+$Comp
+L power:GND #PWR?
+U 1 1 5C59C47B
+P 2200 4500
+F 0 "#PWR?" H 2200 4250 50  0001 C CNN
+F 1 "GND" V 2205 4372 50  0000 R CNN
+F 2 "" H 2200 4500 50  0001 C CNN
+F 3 "" H 2200 4500 50  0001 C CNN
+	1    2200 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C59C4F5
+P 2200 4600
+F 0 "#PWR?" H 2200 4350 50  0001 C CNN
+F 1 "GND" V 2205 4472 50  0000 R CNN
+F 2 "" H 2200 4600 50  0001 C CNN
+F 3 "" H 2200 4600 50  0001 C CNN
+	1    2200 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C59C56F
+P 2200 4700
+F 0 "#PWR?" H 2200 4450 50  0001 C CNN
+F 1 "GND" V 2205 4572 50  0000 R CNN
+F 2 "" H 2200 4700 50  0001 C CNN
+F 3 "" H 2200 4700 50  0001 C CNN
+	1    2200 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C59C5E9
+P 2200 4800
+F 0 "#PWR?" H 2200 4550 50  0001 C CNN
+F 1 "GND" V 2205 4672 50  0000 R CNN
+F 2 "" H 2200 4800 50  0001 C CNN
+F 3 "" H 2200 4800 50  0001 C CNN
+	1    2200 4800
 	0    1    1    0   
 $EndComp
 $EndSCHEMATC
