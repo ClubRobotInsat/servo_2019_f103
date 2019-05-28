@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:servo_2019_f103-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -157,23 +156,20 @@ F 3 "" H 7450 1300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J3
+L Connector_Generic:Conn_01x02 J3
 U 1 1 5C08F1FF
-P 1350 1850
-F 0 "J3" H 1270 1525 50  0000 C CNN
-F 1 "Alim logique" H 1270 1616 50  0000 C CNN
-F 2 "@Robot:HE14-3_horizontal" H 1350 1850 50  0001 C CNN
-F 3 "~" H 1350 1850 50  0001 C CNN
-	1    1350 1850
+P 1350 1950
+F 0 "J3" H 1270 1625 50  0000 C CNN
+F 1 "Alim logique" H 1270 1716 50  0000 C CNN
+F 2 "@Robot:HE14-3_horizontal" H 1350 1950 50  0001 C CNN
+F 3 "~" H 1350 1950 50  0001 C CNN
+	1    1350 1950
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1550 1850 1700 1850
 Wire Wire Line
 	1550 1950 1700 1950
-NoConn ~ 1550 1750
-Text Notes 1600 1750 0    50   ~ 0
-détrompeur
 $Comp
 L power:+5V #PWR011
 U 1 1 5C09305A
@@ -270,12 +266,12 @@ Wire Notes Line
 Text Notes 700  7600 0    50   ~ 0
 Doc pour le 3.3 -> 5\nhttps://www.hobbytronics.co.uk/mosfet-voltage-level-converter
 $Comp
-L Transistor_FET:2N7000 Q2
+L Transistor_FET:BSS138 Q2
 U 1 1 5C0A825D
 P 9900 1250
 F 0 "Q2" V 10150 1250 50  0000 C CNN
-F 1 "2N7000" V 10241 1250 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10100 1175 50  0001 L CIN
+F 1 "BSS138" V 10241 1250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 10100 1175 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9900 1250 50  0001 L CNN
 	1    9900 1250
 	0    1    1    0   
@@ -719,12 +715,12 @@ input : 3.3v ou 5v
 Wire Wire Line
 	8100 4300 8100 4900
 $Comp
-L Transistor_FET:2N7000 Q5
+L Transistor_FET:BSS138 Q5
 U 1 1 5C44DDB0
 P 9900 2150
 F 0 "Q5" V 10150 2150 50  0000 C CNN
-F 1 "2N7000" V 10241 2150 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10100 2075 50  0001 L CIN
+F 1 "BSS138" V 10241 2150 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 10100 2075 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9900 2150 50  0001 L CNN
 	1    9900 2150
 	0    1    1    0   
@@ -801,7 +797,7 @@ Text Label 2200 3700 2    50   ~ 0
 Text Label 2200 3600 2    50   ~ 0
 3.3V_logic_rx
 $Comp
-L servo_2019_f103-rescue:servo_connector-@Robot U3
+L @Robot:servo_connector U3
 U 1 1 5C44D4A4
 P 7400 2200
 F 0 "U3" H 7628 2251 50  0000 L CNN
@@ -873,10 +869,10 @@ NoConn ~ 2200 3900
 Text Label 2200 3800 2    50   ~ 0
 miso
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5C59C47B
 P 2200 4500
-F 0 "#PWR?" H 2200 4250 50  0001 C CNN
+F 0 "#PWR0104" H 2200 4250 50  0001 C CNN
 F 1 "GND" V 2205 4372 50  0000 R CNN
 F 2 "" H 2200 4500 50  0001 C CNN
 F 3 "" H 2200 4500 50  0001 C CNN
@@ -884,10 +880,10 @@ F 3 "" H 2200 4500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0105
 U 1 1 5C59C4F5
 P 2200 4600
-F 0 "#PWR?" H 2200 4350 50  0001 C CNN
+F 0 "#PWR0105" H 2200 4350 50  0001 C CNN
 F 1 "GND" V 2205 4472 50  0000 R CNN
 F 2 "" H 2200 4600 50  0001 C CNN
 F 3 "" H 2200 4600 50  0001 C CNN
@@ -895,10 +891,10 @@ F 3 "" H 2200 4600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0106
 U 1 1 5C59C56F
 P 2200 4700
-F 0 "#PWR?" H 2200 4450 50  0001 C CNN
+F 0 "#PWR0106" H 2200 4450 50  0001 C CNN
 F 1 "GND" V 2205 4572 50  0000 R CNN
 F 2 "" H 2200 4700 50  0001 C CNN
 F 3 "" H 2200 4700 50  0001 C CNN
@@ -906,14 +902,47 @@ F 3 "" H 2200 4700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0107
 U 1 1 5C59C5E9
 P 2200 4800
-F 0 "#PWR?" H 2200 4550 50  0001 C CNN
+F 0 "#PWR0107" H 2200 4550 50  0001 C CNN
 F 1 "GND" V 2205 4672 50  0000 R CNN
 F 2 "" H 2200 4800 50  0001 C CNN
 F 3 "" H 2200 4800 50  0001 C CNN
 	1    2200 4800
 	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5CED3B40
+P 2800 1900
+F 0 "#PWR04" H 2800 1750 50  0001 C CNN
+F 1 "+5V" V 2815 2028 50  0000 L CNN
+F 2 "" H 2800 1900 50  0001 C CNN
+F 3 "" H 2800 1900 50  0001 C CNN
+	1    2800 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5CED3B46
+P 2800 2200
+F 0 "#PWR05" H 2800 1950 50  0001 C CNN
+F 1 "GND" H 2805 2027 50  0000 C CNN
+F 2 "" H 2800 2200 50  0001 C CNN
+F 3 "" H 2800 2200 50  0001 C CNN
+	1    2800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5CED39A2
+P 2800 2050
+F 0 "C3" H 2915 2096 50  0000 L CNN
+F 1 "100uF" H 2915 2005 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H7.0mm_P2.00mm" H 2838 1900 50  0001 C CNN
+F 3 "~" H 2800 2050 50  0001 C CNN
+	1    2800 2050
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
